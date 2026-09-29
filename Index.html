@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width">
+<style>
+body{font-family:Arial; text-align:center; margin-top:50px}
+input{padding:10px} button{padding:10px; background:black; color:white}
+li{list-style:none; margin:10px; background:#eee; padding:10px}
+</style>
+</head>
+<body>
+<h2>My To-Do List</h2>
+<input id="task" placeholder="Enter task">
+<button onclick="add()">Add</button>
+<ul id="list"></ul>
+<script>
+function add(){
+ let t=document.getElementById("task").value;
+ if(t=="") return;
+ let li=document.createElement("li");
+ li.textContent=t;
+ document.getElementById("list").appendChild(li);
+ document.getElementById("task").value="";
+}
+</script>
+</body>
+</html>
